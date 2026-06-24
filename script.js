@@ -8,8 +8,8 @@ const jogadaUsuario = document.getElementById("jogada-usuario");
 const jogadaComputador = document.getElementById("jogada-pc");
 const lista_jogadas = ["✊", "✋", "✌️"];
 
-const secret = document.getElementById('musica')
-const btnMsc = document.getElementById('btn-msc')
+const secret = document.getElementById("musica");
+const btnMsc = document.getElementById("btn-msc");
 
 let cod_usuario = 0;
 let opc_usuario = "";
@@ -18,9 +18,9 @@ let hist_v = 0,
   hist_e = 0,
   hist_d = 0;
 
-btnMsc.addEventListener("click", ()=> {
-  secret.play()
-})
+btnMsc.addEventListener("click", () => {
+  secret.play();
+});
 
 pedra.addEventListener("click", () => {
   cod_usuario = 1;
@@ -83,16 +83,17 @@ function resetarBotoes() {
 function analisarJogada(jgd_usuario, jgd_computador) {
   if (jgd_usuario === jgd_computador) {
     hist_e++;
-    document.getElementById('msg-result').textContent = "🟡 Empate! Deu a mesma jogada."
+    document.getElementById("msg-result").textContent =
+      "🟡 Empate! Deu a mesma jogada.";
   } else if (
     (jgd_usuario === 1 && jgd_computador === 3) ||
     (jgd_usuario === 2 && jgd_computador === 1) ||
     (jgd_usuario === 3 && jgd_computador === 2)
   ) {
     hist_v++;
-    document.getElementById('msg-result').textContent = "🟢 Você venceu!"
+    document.getElementById("msg-result").textContent = "🟢 Você venceu!";
   } else {
     hist_d++;
-    document.getElementById('msg-result').textContent = "🔴 Você perdeu!"
+    document.getElementById("msg-result").textContent = "🔴 Você perdeu!";
   }
 }
