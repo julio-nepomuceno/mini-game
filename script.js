@@ -8,12 +8,19 @@ const jogadaUsuario = document.getElementById("jogada-usuario");
 const jogadaComputador = document.getElementById("jogada-pc");
 const lista_jogadas = ["✊", "✋", "✌️"];
 
+const secret = document.getElementById('musica')
+const btnMsc = document.getElementById('btn-msc')
+
 let cod_usuario = 0;
 let opc_usuario = "";
 
 let hist_v = 0,
   hist_e = 0,
   hist_d = 0;
+
+btnMsc.addEventListener("click", ()=> {
+  secret.play()
+})
 
 pedra.addEventListener("click", () => {
   cod_usuario = 1;

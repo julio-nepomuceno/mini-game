@@ -8,32 +8,38 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <button id="btn-msc">❌ NÃO CLIQUE AQUI! ❌</button>
+    <audio id="musica">
+      <source src="poesia.mp3" type="audio/mpeg" />
+    </audio>
     <!-- TELA DE JOGO -->
     <div class="container">
-        <h1 class="titulo">PEDRA, PAPEL, TESOURA!</h1>
-        <h2 class="subtitulo">Escolha sua jogada</h2>
-        <div class="row-btn">
-            <button id="pedra" class="btn-all">✊</button>
-            <button id="papel" class="btn-all">✋</button>
-            <button id="tesoura" class="btn-all">✌️</button>
-        </div>
-        <button id="btn-jogar" class="btn-jogar">JOGAR</button>
+      <h1 class="titulo">PEDRA, PAPEL, TESOURA!</h1>
+      <h2 class="subtitulo">Escolha sua jogada</h2>
+      <div class="row-btn">
+        <button id="pedra" class="btn-all">✊</button>
+        <button id="papel" class="btn-all">✋</button>
+        <button id="tesoura" class="btn-all">✌️</button>
+      </div>
+      <button id="btn-jogar" class="btn-jogar">JOGAR</button>
     </div>
     <!-- TELA DE RESULTADO-->
-     <div class="container-result">
-        <h1 class="titulo">Resultado</h1>
-        <div class="result">
-            <p id="jogada-usuario"></p>
-            <p id="jogada-pc"></p>
-        </div>
-        <p id="msg-result">
-        </p>
-        <div class="historico">
-            <p id="hist-v"></p>
-            <p id="hist-d"></p>
-            <p id="hist-e"></p>
-        </div>
-        <button id="btn-jogar-novamente" class="btn-jogar">JOGAR NOVAMENTE</button>
-     </div>
+    <div class="container-result">
+      <h1 class="titulo">Resultado</h1>
+      <div class="result">
+        <p id="jogada-usuario"></p>
+        <p id="jogada-pc"></p>
+      </div>
+      <p id="msg-result"></p>
+      <div class="historico">
+        <p id="hist-v"></p>
+        <p id="hist-d"></p>
+        <p id="hist-e"></p>
+      </div>
+      <button id="btn-jogar-novamente" class="btn-jogar">
+        JOGAR NOVAMENTE
+      </button>
+    </div>
+    <p id="copy">Desenvolvido por Júlio.</p>
   </body>
 </html>
