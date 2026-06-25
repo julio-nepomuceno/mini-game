@@ -18,6 +18,8 @@ let hist_v = 0,
   hist_e = 0,
   hist_d = 0;
 
+btnJogar.disabled = true
+
 btnMsc.addEventListener("click", () => {
   secret.play();
 });
@@ -25,6 +27,7 @@ btnMsc.addEventListener("click", () => {
 pedra.addEventListener("click", () => {
   cod_usuario = 1;
   opc_usuario = "✊";
+  btnJogar.disabled = false
   papel.disabled = true;
   tesoura.disabled = true;
   pedra.style.backgroundColor = "#949494";
@@ -33,6 +36,7 @@ pedra.addEventListener("click", () => {
 papel.addEventListener("click", () => {
   cod_usuario = 2;
   opc_usuario = "✋";
+  btnJogar.disabled = false
   tesoura.disabled = true;
   pedra.disabled = true;
   papel.style.backgroundColor = "#949494";
@@ -41,6 +45,7 @@ papel.addEventListener("click", () => {
 tesoura.addEventListener("click", () => {
   cod_usuario = 3;
   opc_usuario = "✌️";
+  btnJogar.disabled = false
   papel.disabled = true;
   pedra.disabled = true;
   tesoura.style.backgroundColor = "#949494";
@@ -58,6 +63,7 @@ btnJogar.addEventListener("click", () => {
 btnJogarNovamente.addEventListener("click", () => {
   document.querySelector(".container-result").style.display = "none";
   document.querySelector(".container").style.display = "flex";
+  btnJogar.disabled = true
   resetarBotoes();
 });
 
